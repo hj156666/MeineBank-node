@@ -97,5 +97,11 @@ zinssatz = 0.1;
 laufzeit= 3;
  for (let i = 0; 0 < laufzeit; i++) {endkapital = endkapital * (1+ zinssatz);
     console.log("endkapitalNachJahr"+ (i+1) + ": " +endkapital + "EUR.");}
+console.log("Aufgabe 9");
+console.log("Wenn der Artikel Lebensmittel ist, dann ist ");
+let Artikel = "Lebensmittel"
+let mwsSatz = (Artikel === "lebensmittel") ? 7 : 19;
 
- 
+console.log("der Mehrwertssteuersatz für den Artikel " + Artikel +" beträgt " + mwsSatz +"%.");
+console.log("Aufgabe 10");
+console.log("Hausaufgabe: Eigene Aufgabe mit Wennn- Fuktion / if-else-Ausdruck");
