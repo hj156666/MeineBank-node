@@ -1,107 +1,202 @@
-console.log("Grundlagen");
-console.log("==========");
- 
-console.log("Aufgabe 1");
-console.log("Erstelle zwei Variablen namens a und b. Initialisiere mit den Werten 1 und2")
- 
+console.log('GRUNDLAGEN');
+console.log('==========');
+
+console.log('Aufgabe 1');
+console.log('Erstelle zwei Variablen namens a und b. Initialisiere mit den Werten 1 und 2.');
+
 // Der Wert 1 wird zugewiesen (=) an eine Variable namens a.
 let a = 1;
 let b = 2;
- 
-// MIt dem Plus-operator findet eine String-Verkettung statt. Ein String ist eine zeichenkette, eingerahmt mit hochkommas.
-console.log("Der wert der Variablen a ist:" +a);
- 
-console.log("Aufgabe 2");
-console.log("Gib das Ergebnis der Addition von a und b aus.")
- 
-// wenn links oder rechts vom Plusoperator ein Sttring steht wird verkettet.
-//Wenn links und rechts Zahlen stehen, wird addiert.
+
+// Mit dem Plus-Operator findet eine String-Verkettung statt. Ein String ist eine Zeichenkette, eingerahmt 
+// mit Hochkommas.
+console.log('Der Wert der Variablen a ist: ' + a);
+
+console.log('Aufgabe 2');
+console.log('Gib das Ergebnis der Addition von a und b aus.');
+
+// Wenn links oder rechts vom Plus-Operator ein String steht, wird verkettet.
+// Wenn links und rechts Zahlen stehen, wird addiert.
 console.log(a+b);
-console.log("Das ergebnis der addition:"+(a+b));
- 
-console.log("Aufgabe 3");
-console.log("Gib das Ergebniss der Subtraktion, Multiplikation, Division von a und b aus.");
- 
-console.log("Subtraktion:"+(a-b));
-console.log("Multiplikation:"+(a*b));
-console.log("Division:"+(a/b));
- 
-console.log("Aufgabe 4");
-console.log("c ist das Ergebnis der Addition von a und b.");
- 
-let c =a + b;
-console.log("Der Wert von c ist:" +c);
- 
- 
- 
- 
- 
-console.log("Aufgabe5")
-console.log(" a und b sind die Seitenlängen der Katheten eines rechtwinkligen Dtreiecks. Bestimme die Länge der Hypotenuse c")
- 
-// cQuadrat ist in Kamelhöcker-Notation geschrieben. Das heisst: zuerst ein Kleinbuschtabe. Verbundene Wörter beginnen groß.
-let cQuadrat= a*a+b*b;
- 
-//Javascript kiennt eine Bibliothek namens Math in der Bibliothek gibt es eine Funktion namens sqrt. Als Parameter in den runden Klammern erwartet sqrt eine Zahl, aus der dann die Wurzel gezogen wird.
-c= Math.sqrt(cQuadrat);
- 
-console.log("Die Hypotenuse ist" +c+" lang.");
- 
+console.log('Das Eregbnis der Addition: ' + (a + b));
+
+console.log('Aufgabe 3');
+console.log('Gib das Ergebnis der Subtraktion, Multiplikation, Division von a und b aus.');
+
+console.log("Subtraktion:" + (a - b));
+console.log("Multiplikation:" + (a * b));
+console.log("Division:" + (a / b));
+
+console.log('Aufgabe 4');
+console.log('Der Wert von c sei das Ergebnis der Addition von a und b.');
+
+let c = a + b;
+
+console.log("c hat den Wert: " + c);
+
+console.log('Aufgabe 5');
+console.log('a und b sind die Seitenlängen der Katheten eines rechtwinkligen Dreiecks. Bestimme die Länge der Hypotenuse c');
+
+// cQuadrat ist in Kamelhöcker-Notation geschrieben. Das heißt: zuerst ein Kleinbuchstabe. Verbundene Wörter beginnen groß.
+let cQuadrat = a * a + b * b;
+
+// Javascript kennt eine Bibliothek namens Math. In der Bibliothek gibt es eine Funktion namens sqrt. Als Parameter in den
+// runden Klammern erwartet sqrt eine Zahl, aus der dann die Wurzel gezogen wird.
+c = Math.sqrt(cQuadrat);
+
+console.log('Die Hypotenuse ist ' + c + ' lang.');
+
 console.log('Aufgabe 6');
 console.log('Ein Kunde legt 100 Euro auf dem Sparbuch an. Jedes Jahr bekommt er 10% Zinsen. Wie viel bekommt der Kunde');
 console.log('nach zwei Jahren ausgezahlt. Beachte den Zinseszinseffekt.');
- 
+
 let laufzeit = 2;
 let startkapital = 100;
 let zinssatz = 0.1;   /* Das Komma ist zur Entwicklungszeit ein Punkt. */
- 
+
 let kapitalNachEinemJahr = startkapital * (1 + zinssatz);
- 
+
 console.log("Kapital nach einem Jahr: " + kapitalNachEinemJahr + " EUR.");
- 
+
 let kapitalNachZweiJahren = kapitalNachEinemJahr * (1 + zinssatz);
- 
+
 console.log("Kapital nach zwei Jahren: " + kapitalNachZweiJahren + " EUR.");
- 
-//let endkapital = Math.pow((startkapital * zinssatz) , laufzeit);
- 
-let endkapital = startkapital * Math.pow(1 + zinssatz, laufzeit);
- 
+
+let endkapital = startkapital * Math.pow((1 + zinssatz) , laufzeit);
+
 console.log("Endkapital nach " + laufzeit + " Jahren: " + endkapital + " EUR.");
- console.log("Aufgabe 7");
- console.log("Die Werte aus der vorhehringen Aufgabe werden als Reihe dargestellt.");
 
- endkapital = startkapital;
- console.log(endkapital);
-//NAch dem 1 Jahr erhöht sich das Endkapital um den Faktor* 1,1 
- endkapital = startkapital * (1 + zinssatz) ;
- console.log(endkapital);
-//NAch dem 1 Jahr erhöht sich das Endkapital um den Faktor* 1,1 
-endkapital = startkapital * (1 + zinssatz) ;
-console.log(endkapital);
-//NAch dem 1 Jahr erhöht sich das Endkapital um den Faktor* 1,1 
-endkapital = startkapital * (1 + zinssatz) ;
-console.log(endkapital);
-//NAch dem 1 Jahr erhöht sich das Endkapital um den Faktor* 1,1 
-endkapital = startkapital * (1 + zinssatz) ;
+console.log('Aufgabe 7');
+console.log('Die Werte aus der vorherigen Aufgabe werden als Reihe dargestellt.');
+
+// Im Zeitpunkt Null ist das endkapital = dem startkapital
+endkapital = startkapital; 
 console.log(endkapital);
 
- console.log("Aufgabe 8");
- console.log("In aufgabe sieben wurde die Anweisung endkapital = ... mehrfach wiederholt");
-console.log("um sich Tiparbeit zu Sparen und die wiederholung Anweisung in der gewünschten Häufigkeit durchzuführen ");
-console.log("nutzt der Programierer eine Schleife.");
+// Nach dem ersten Jahr erhöht sich das Endkapital um den Faktor 1,1
+endkapital =  endkapital * (1 + zinssatz);
+console.log(endkapital);
+
+// Nach dem zweiten Jahr wird dem Endkapital der Wert des Enkapitals * 1,1 zugewiesen.
+endkapital =  endkapital * (1 + zinssatz);
+console.log(endkapital);
+
+// Nach dem dritten Jahr wird dem Endkapital der Wert des Enkapitals * 1,1 zugewiesen.
+endkapital =  endkapital * (1 + zinssatz);
+console.log(endkapital);
+
+// Nach dem vierten Jahr wird dem Endkapital der Wert des Enkapitals * 1,1 zugewiesen.
+endkapital =  endkapital * (1 + zinssatz);
+console.log(endkapital);
+
+console.log('Aufgabe 8');
+console.log('In Aufgabe 7 wurde die Anweisung endkapital = ... mehrfach wiederholt.');
+console.log('Um sich Tipparbeit zu sparen und die Wiederholung der Anweisung in der');
+console.log('gwünschten Häufigkeit durchzuführen, nutzt der Programmierer eine Schleife.'); 
 
 startkapital = 100;
 endkapital = startkapital;
 zinssatz = 0.1;
-laufzeit= 3;
- for (let i = 0; 0 < laufzeit; i++) {endkapital = endkapital * (1+ zinssatz);
-    console.log("endkapitalNachJahr"+ (i+1) + ": " +endkapital + "EUR.");}
-console.log("Aufgabe 9");
-console.log("Wenn der Artikel Lebensmittel ist, dann ist ");
-let Artikel = "Lebensmittel"
-let mwsSatz = (Artikel === "lebensmittel") ? 7 : 19;
+laufzeit = 3;
 
-console.log("der Mehrwertssteuersatz für den Artikel " + Artikel +" beträgt " + mwsSatz +"%.");
-console.log("Aufgabe 10");
-console.log("Hausaufgabe: Eigene Aufgabe mit Wennn- Fuktion / if-else-Ausdruck");
+for (let i = 0; i < laufzeit; i++) {
+    endkapital =  endkapital * (1 + zinssatz);
+    console.log("Endkapital nach Jahr " + (i+1) + ": " + endkapital + "EUR.");
+}
+
+
+console.log('Aufgabe 9');
+console.log('Wenn der Artikel Lebensmittel ist, dann ist die MwSt 7%, ansonsten 19%.');
+console.log('In Excel würde das so aussehen: =wenn(A1=lebensmittel;7;19)');
+
+let artikel = 'Lebensmittel';
+let mwstSatz = (artikel === "Lebensmittel") ? 7 : 19;
+
+// Der Ausdruck ist vergleichbar mit Excel. In den runden Klammern findet die Prüfung
+// auf wahr oder falsch statt. Wenn article === "Lebensmittel" wahr ist, wird der
+// Wert vor dem Doppelpunkt zurückgegeben. Ansonten der Wert hinter dem Doppelpunkt.
+// Anders als in Excel ist das einfache Gleichheitszeichen für eine Zuweisung reserviert.
+// Für einen Vergleich muss in Javascript mit zwei oder drei === gearbeitet werden. 
+
+console.log('Der Mehrwertsteuersatz für den Artikel ' + artikel + ' beträgt ' + mwstSatz +'%.');
+
+console.log('Aufgabe 10');
+console.log('Wenn der gesamtbetrag des Einkaufs größer oder gleich 100€ ist, beträgt der Rabatt 20%');
+console.log('Ansonsten gibt es keinen Rabatt');
+ 
+// Die Variablen werden deklariert und der Gesamtbetrag mit dem Wert 120 initialisiert
+let gesamtbetrag = 120;
+let rabatt;
+ 
+// Die if-Kontrollstruktur kann zwei Fälle unterscheiden.
+if (gesamtbetrag >= 100){
+    // Wenn die Prüfung in den runden klammern wahr ist, wird der Wert 20 zugewiesen.
+    rabatt = 20;
+ 
+}else{
+    // Wenn die Prüfung in runden klammern unwahr ist, wird der Wert 0 zugewiesen.
+    rabatt = 0;
+ 
+}
+ 
+console.log('Bei einem Gesamtbetrag von ' + gesamtbetrag + 'Euro beträgt der Rabatt ' + rabatt + " Prozent.");
+ 
+console.log('Aufgabe 11');
+console.log('Wenn der gesamtbetrag des Einkaufs größer oder gleich 100€ ist, beträgt der Rabatt 20%');
+console.log('wenn der Gesamtbetrag des Einkaufs zwischen 50 und kleiner 100€ ist, beträgt der Rabatt 10');
+console.log('Ansonsten gibt es keinen Rabatt');
+ 
+gesamtbetrag = 120;
+rabatt;
+ 
+// Hier werden drei Fälle unterschieden. Dazu muss die if-Kontrollstruktur geschaltet werden.
+if (gesamtbetrag >= 100){
+    rabatt = 20;
+}else{
+ 
+    if (gesamtbetrag >= 50){
+        rabatt = 10;
+    }else{
+        rabatt = 0;
+    }
+ 
+}
+
+console.log('Bei einem Gesamtbetrag von ' + gesamtbetrag + 'Euro beträgt der Rabatt ' + rabatt + " Prozent.");
+
+console.log("Aufgabe 12");
+console.log("Wenn der Gesamtbetrag des Einkaufs größer oder gleich 200€ ist, ist der Versand kostenlos");
+console.log("Wenn der Gesamtbetrag des Einkaufs zwischen 100 und kleiner 200€ ist, betragen Versandkosten 5 Euro.");
+console.log("Ansonsten betragen die Versandkosten 10€");
+
+let Versandkosten;
+let einkaufswert = 200;
+
+if (einkaufswert >=200){
+    Versandkosten= 0
+}else{
+    if (einkaufswert >=100){
+        Versandkosten= 5;
+    }else{
+        Versandkosten = 10;
+}
+}
+console.log("Bei einem Einkaufswert von " + einkaufswert + " Euro betragen die versandkosten " + Versandkosten + "Euro.");
+
+
+console.log("Aufgabe 13");
+console.log("Frauen ab 18 zahlen  10€ Eintritt. Männer ab 18 zahlen 15€ Eintritt. Minderjährige zahlen 6 Euro");
+
+let Eintritt
+let alter = 10 ;
+let geschlecht = "m";
+
+if (geschlecht === "w" && alter >=18){
+    Eintritt = 15;
+}
+if (geschlecht === "m" && alter >=18){
+    Eintritt = 15;
+}
+if (alter <18){
+    Eintritt = 6;
+}
