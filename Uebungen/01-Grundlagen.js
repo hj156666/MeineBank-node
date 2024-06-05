@@ -200,3 +200,6 @@ if (geschlecht === "m" && alter >=18){
 if (alter <18){
     Eintritt = 6;
 }
+
+console.log("Aufgabe14");
+console.log("Wenn die zahl kleiner oder gleich 5 ist, dann "negativ". Wenn)
