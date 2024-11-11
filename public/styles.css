@@ -1,64 +1,51 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff; /* Hellblau */
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:xx-large;
+    font-weight: 500;   
+    color:#1ee481;
 }
 
-header {
-    background-color: #42aaff; /* Dunkleres Hellblau für Header */
-    color: #fff;
-    padding: 20px;
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1ee481;
 }
 
-header h1 {
-    margin: 0;
+p{
+    font-family: 'Courier New', Courier, monospace;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+footer{
+    background-color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+header{
+    background-color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: xx-large;
+    text-align: center;
 }
 
-nav ul li a {
-    color: #fff;
+a {
+    color: white;
     text-decoration: none;
 }
 
-#hero {
-    background-color: #00bfff; /* Mittleres Hellblau für Hero-Sektion */
-    padding: 50px;
-    text-align: center;
-}
-
-#about, #services {
-    padding: 50px;
-}
-
-footer {
-    background-color: #2e8edd; /* Dunkleres Hellblau für Footer */
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
+/* Der folgende Style wirkt auf eine class namens flex-container 
+eine Class wird in der styles.css immer mit einem führenden Punkt dargestellt.*/
 .flex-container {
     display: flex;
-    flex-wrap: nowrap;
-    background-color: DodgerBlue;
-    align-items: center;
+    flex-wrap: wrap;
+    background-color: DodgerBlue;    
   }
-  
+  /* Der folgende Style wirkt auf ale DIVs innerhalb eines flex-containers*/
   .flex-container > div {
-    background-color: #f1f1f1;
-    width: 50%;
+    background-color: #1ee481;
+    width: 100%;
     margin: 10px;
     text-align: center;
     line-height: 75px;
     font-size: 30px;
-    
   }

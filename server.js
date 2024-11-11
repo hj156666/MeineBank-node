@@ -2,37 +2,59 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
- 
+
 'use strict';
- 
+
 const express = require('express');
- 
-// Constants
-// Die anweisungen werden von oben nach unten abgearbeitet. DEr  Wert 3000 wird von rechts nach links zugewiesen an die Konstante Namens Port. DAs einfache gleichheits Zeichen lässt sich also übeersetzen mit wird zugewiesen an.
+
+// Die Anweisungen werden von oben nach unten abgearbeitet. Der Wert 3000 wird von rechts nach links 
+// zugewiesen an die Konstante namens PORT. Das einfache Gleichheitszeichen lässt sich also übersetzen
+// mit "... wird zugewiesen an ..."
 const PORT = 3000;
- 
-//DER Wert`.0.0.0.0´ wird zugewiesen an die Kostante Namens HOST
+
+// Der Wert '0.0.0.0' wird zugewiesen an eine Konstante namens HOST 
 const HOST = '0.0.0.0';
- 
+
 // App
 const app = express();
+
+app.use(express.static('public'))
+
+
+
+
+
 app.get('/', (req, res) => {
-   
-    // Res ist dei antwort des servers an den Browser.
-    //send() ist die anweisung etwas an den Browser zu senden
-    //Helllo..... ist der wert der an die Anweisung send() übergeben wird
- 
-   
-    //res.send('Hello remote world!\n');
-// Das res-Objekt kann noch mehr als nur eine Zeichenkette an den Browser zu senden. Das res Objekt kann mit der Funktion render , eine HTML an den Browser senden.
- res.render("index.ejs",{});
+
+	// res ist die Antwort des Servers an den Browser.
+	// send() ist die Anweisung etwas an den Browser zu senden
+	// 'Hello ...' ist der Wert, der an die Anweisung send() übergeben wird
+	//res.send('Hello remote world!\n');
+
+	// Das res-Objekt kann noch mehr als nur eine Zeichenkette an den
+	// Browser zu senden. Das res-Objekt kann mit der Funktion render()
+	// eine HTML-Datei an den Browser senden.
+	res.render('index.ejs',{});
 });
- 
- 
-// Mit listen wird der server angewiesen , Auf den angegebenen Host un d Port zu lauschen
+app.get('agb', (req, res) => {
+    res.render('agb.ejs',{})
+});
+
+)
+
+// Mit listen() wird der Server angewiesen, auf den angegebenen Host und
+// Port zu lauschen.  
 app.listen(PORT, HOST);
- 
-// Mit der Anweeisung Konsole.log() Wird dem Server Administrator auf der Konsole angezeigt, waa der server macht.  Der Programmierer sxchreibt dazu in die runden Klammern  den ausdruck den ausdruck,  der auf konsole angezeigt werden soll. die werte der beiden Konstaten Host und port werden in den Ausdruck übergeben. ein Verb mit anschliessenden klammer steht immer für eine Anweisung etwas zu tun.
-console.log(`Running on http://${HOST}:${PORT}`); 
-// mit der fuktion require wird die Datei in den runden Klammern eingelesen.
-require("./Uebungen/02-boolean.js");
+
+// Mit der Anweisung console.log() wird dem Server-Administrator auf der
+// Konsole angezeigt, was der Server macht. Der Programmierer schreibt dazu 
+// in die runden Klammern den Ausdruck, der auf der Konsole angezeigt
+// werden soll. Die Werte der beiden Konstanten HOST und PORT werden in den
+// Ausdruck übergeben. Ein Verb mit anschließenden runden Klammern steht
+// immer für eine Anweisung etwas zu tun. 
+console.log(`Running on http://${HOST}:${PORT}`);
+
+//require('./uebungen/01-grundlagen.js');
+//require('./uebungen/03-objekte.js');
+//require('./klausuren/klausur20240930.js');
+//require('./uebungen/04-funktionen.js');
